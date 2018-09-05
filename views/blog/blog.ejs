@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>目码社</title>
+    <link rel="stylesheet" href="../public/public.css">
+    <link rel="stylesheet" href="../index/index.css">
+</head>
+
+<body>
+    <section class="layout">
+        <%include ../public/header.ejs%>
+            <article class="layout-content">
+                <div class="eye-raw">
+                    <div class="eye-6">
+                        <p>我是
+                            <%= title %>
+                            -全部
+                        </p>
+                        <%include ../public/blog-lists.ejs%>
+                    </div>
+                    <div class="eye-3">
+                        <%include ../public/blog-type.ejs%>
+                    </div>
+                </div>
+            </article>
+            <%include ../public/footer.ejs%>
+    </section>
+    <!-- <a href="/blog/open-source">去往开源页</a> -->
+    <script src="/static/jquery/dist/jquery.min.js"></script>
+    <script src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../blog/blog.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+
+
+        /* 测试 || && 执行 */
+        var and = 'dataand';
+        var and1 = and && '';
+        var or = 'dataor';
+        var or1 = or || 'or';
+        console.log('and1----:', and1);
+        console.log('or1----:', or1);
+        // result &&执行，如果&&前面的值为 true 值，那么最终结果会继续向后执行，结果为&&后面的值
+        // result ||执行，如果&&前面的值为 true 值，那么最终结果不会继续向后执行，结果为||前面的值
+
+        /* --------------------测试string字符串自定义解析模板------------------------- */
+        var map = {
+            user_name: 'ahj',
+            password: '111111',
+            user_id: 1,
+            article_type_id: 1
+        }
+        // var str =
+        //     'select u.id, u.name, u.user_name from eye_users as u where user_name = ${user_name}$ and password= ${password}$';
+        var str =
+            'SELECT COUNT(*) FROM eye_articles where user_id = ${user_id}$ and article_type_id = ${article_type_id}$;' +
+            ' SELECT * FROM eye_articles where user_id = ${user_id}$ and article_type_id = ${article_type_id}$ limit 0,20 ;';
+        var re = /\${(.*?)}\$/g;
+        var array = [];
+        while (temp = re.exec(str)) {
+            array.push(temp[0])
+        }
+        var type = 'many';
+        var data = str;
+        for (var k = 0; k < array.length; k++) {
+            var key = array[k].replace('${', "").replace("}$", "");
+            var value = map[key];
+            if (type == 'many') {
+                if (!value) {
+                    data = data.replace('= ' + array[k], '');
+                } else {
+                    setData();
+                }
+            } else {
+                setData();
+            }
+
+            function setData() {
+                if (typeof value === 'string') {
+                    value = "'" + value + "'";
+                }
+                data = data.replace(array[k], value);
+            }
+
+        }
+        var result = {
+            init: str,
+            data: data
+        }
+        console.log(array);
+        console.log(data);
+    </script>
+</body>
+
+</html>

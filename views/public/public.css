@@ -1,0 +1,145 @@
+@import url(/static/stylesheets/style.css);
+/* 头部 */
+
+.layout-header {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.9em 0;
+    border-bottom: 0.5px solid #bbb;
+    position: fixed;
+    max-width: 78.75em;
+    top: 0;
+    background: rgba(238, 238, 238, .9);
+}
+
+.layout-header nav {
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.layout-header nav .title {
+    font-size: 1.6em;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.layout-header nav .menus {
+    display: -webkit-flex;
+    display: -o-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+}
+
+nav .menus li {
+    box-sizing: border-box;
+}
+
+nav .menus li a {
+    box-sizing: border-box;
+    padding: 0 0.6em;
+    color: #555;
+    text-decoration: none;
+}
+
+nav .menus li a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+    color: #5CACEE;
+}
+
+nav .menus .user-operation {
+    margin-left: 2.8em;
+}
+
+nav .menus .user-operation a {
+    font-weight: 600;
+}
+
+/* 底部footer */
+
+.layout-footer {
+    width: 100%;
+    clear: both;
+    line-height: 2.5em;
+    text-align: center;
+    border-top: #eee solid 1px;
+}
+
+.layout-footer .content p {
+    padding: 0.3em 0.1em 0.1em 0.3em;
+    float: right;
+}
+
+.layout-footer .content p a {
+    color: #555;
+    text-decoration: none;
+}
+
+.layout-footer .content p a:hover {
+    text-decoration: underline;
+    color: #5CACEE;
+}
+
+/* 列表 */
+
+.eye-lists {
+    margin: 1.5em 0;
+}
+
+.eye-lists h3 {
+    text-align: center;
+}
+
+.eye-lists ul {
+    margin: 1.5em 1em;
+}
+
+.eye-lists ul li {
+    margin: 1em 0;
+}
+
+/* 栏目模块 */
+
+.eye-module {
+    box-sizing: border-box;
+    padding: 1em 1.5em;
+    border: .5px solid #ddd;
+    border-radius: 8px;
+    width: 85%;
+    float: right;
+    margin-bottom: 1.8em;
+}
+
+.eye-module ul {
+    list-style: square;
+    box-sizing: border-box;
+    padding: 0 1.5em;
+}
+
+.eye-module .circle {
+    list-style: circle;
+}
+
+.eye-module .disc {
+    list-style: disc;
+}
+
+.eye-module ul li {
+    margin: .8em 0;
+}
+
+.eye-module ul li a {
+    font-size: .9em;
+    color: #333;
+}
+
+.eye-module ul li a:hover {
+    font-weight: 600;
+    color: #5CACEE;
+}

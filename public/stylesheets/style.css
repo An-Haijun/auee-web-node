@@ -1,0 +1,240 @@
+html {
+  background-color: #eee;
+}
+body {
+  font: 1em "Lucida Gr and e", Helvetica, Arial, sans-serif;
+  font-family: Georgia, serif;
+  color: #555;
+}
+
+button,
+p,
+a,
+ul,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #00B7FF;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 全局布局 */
+
+.layout {
+  width: 100%;
+  min-height: 100%;
+  max-width: 78.75em;
+  box-sizing: border-box;
+  margin: 0 auto;
+  font-size: 1em;
+}
+
+/* 内容区 */
+
+.layout .layout-content {
+  box-sizing: border-box;
+  padding: 2em 1em;
+  margin-top: 4.5em;
+}
+
+#content h1,
+h2,
+h3,
+h4 {
+  margin: .5em 0;
+  padding: 0 0 0.5em 0;
+  color: #333;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  border-bottom: 1px solid #ddd;
+}
+
+/* 自定义栅格 */
+
+.eye-raw {
+  display: -webkit-flex;
+  display: -o-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-1 {
+  width: 10%;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-2 {
+  width: 20%;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-3 {
+  width: 30%;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-4 {
+  width: 40%;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-5 {
+  width: 50%;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-6 {
+  width: 60%;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-7 {
+  width: 70%;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-8 {
+  width: 80%;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-9 {
+  width: 90%;
+  padding: 0;
+  margin: 0;
+}
+
+.eye-c-all {
+
+}
+
+@media screen and (min-width:900px) {
+  .eye-1 {
+    width: 10%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-2 {
+    width: 20%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-3 {
+    width: 30%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-4 {
+    width: 40%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-5 {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-6 {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-7 {
+    width: 70%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-8 {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-9 {
+    width: 90%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (min-width:500px) and (max-width:900px) {
+  .eye-1 {
+    width: 10%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-2 {
+    width: 20%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-3 {
+    width: 30%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-4 {
+    width: 40%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-5 {
+    width: 50%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-6 {
+    width: 60%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-7 {
+    width: 70%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-8 {
+    width: 80%;
+    padding: 0;
+    margin: 0;
+  }
+  .eye-9 {
+    width: 90%;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width:580px) {
+  .eye-raw {
+    display: block;
+  }
+  .eye-1,
+  .eye-2,
+  .eye-3,
+  .eye-4,
+  .eye-5,
+  .eye-6,
+  .eye-7,
+  .eye-8,
+  .eye-9 {
+    width: 100% !important;
+  }
+}
