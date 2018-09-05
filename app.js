@@ -29,8 +29,8 @@ app.use(function (req, res, next) {
   console.log(req.url);
   if (req.url != '/api/blog/account/login' && req.url != '/api/blog/account/register') {
     var token = req.headers.token;
-    console.log(req.headers);
-    var jwt = new JwtUtil(token);
+    console.log("我的token---:", token);
+    var jwt = new JwtUtil({data:token});
     var result = jwt.verifyToken();
     // 如果考验通过就next，否则就返回登陆信息不正确
     if (result == 'err') {

@@ -2,9 +2,9 @@ var fs = require('fs');
 var path = require('path');
 var jwt = require('jsonwebtoken');
 
-function Jwt(data) {
-    this._data = data.data;
-    this._usedtime = data.usedtime;
+function Jwt(options) {
+    this._data = options.data;
+    this._usedtime = options.usedtime;
 }
 
 Jwt.prototype.generateToken = function() {

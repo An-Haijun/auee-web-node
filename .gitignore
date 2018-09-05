@@ -1,2 +1,4 @@
 public/pem/rsa_public_key.pem
 public/pem/rsa_private_key.pem
+node_modules/
+package-lock.json
